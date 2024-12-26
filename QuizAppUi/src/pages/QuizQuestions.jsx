@@ -13,6 +13,7 @@ export default function QuizQuestions() {
 			.then((response) => {
 				setQuestions(response.data);
 				console.log("API Response: " + response);
+				console.log("Hello World");
 			})
 			.catch((error) => {
 				console.error("Failed to fetch quiz questions:", error);
@@ -74,7 +75,14 @@ export default function QuizQuestions() {
 				</div>
 			))}
 			<div className="h-[30px] flex items-center justify-center py-8 mt-2">
-				<button className="text-3xl font-bold bg-blue-700 text-white p-3 rounded-md" onClick={handleSubmit}>Submit</button>
+				<button
+					className="text-3xl font-bold
+				bg-blue-700 text-white p-3
+				rounded-md"
+					onClick={handleSubmit}
+				>
+					Submit
+				</button>
 			</div>
 		</div>
 	);
